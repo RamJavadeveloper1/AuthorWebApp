@@ -1,1 +1,77 @@
-<p>author-update works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="">
+                <fieldset>
+                    <legend class="text-center">Valid information is required to Update</legend>
+
+                    <div class="form-group">
+                        <label for="firstName">
+                            <span class="req">* FirstName: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.firstName" name="name" id="firstName"
+                            class="form-control" placeholder="Enter Your Name..." aria-describedby="name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">
+                            <span class="req">* LastName: <small>This will be your Author lasttname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.lastName" name="lastName" id="lastName"
+                            class="form-control" placeholder="Enter Your lastName..." aria-describedby="lastName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="City">
+                            <span class="req">* Name: <small>This will be your Author City</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.address.city" name="city" id="city"
+                            class="form-control" placeholder="Enter Your City..." aria-describedby="city" />
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="AddressLine1">
+                            <span class="req">* addressLine1: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.address.addressLine1" name="addressLine1"
+                            id="addressLine1" class="form-control" placeholder="Enter Your AddressLine1..."
+                            aria-describedby="addressLine1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="AddressLine2">
+                            <span class="req">* AddressLine2: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.address.addressLine2" name="addressLine2"
+                            id="addressLine2" class="form-control" placeholder="Enter Your AddressLine2..."
+                            aria-describedby="addressLine2" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">
+                            <span class="req">* state: <small>This will be your Author state</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.address.state" name="state" id="state"
+                            class="form-control" placeholder="Enter Your state..." aria-describedby="state" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">
+                            <span class="req">* Country: <small>This will be your Author country</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.address.country" name="country" id="country"
+                            class="form-control" placeholder="Enter Your country..." aria-describedby="country" />
+                    </div>
+
+                    <div class="form-group">
+                        <button placement="right" class="btn btn-success" (click)="update()">
+                            <span class="glyphicon glyphicon-ok">Update </span> 
+                        </button>
+                        <a routerLink="/authors" class="btn btn-link"><span class="glyphicon glyphicon-ok">Back</span></a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

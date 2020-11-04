@@ -11,6 +11,9 @@ import { AuthorListComponent } from './author-list/author-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthorUpdateComponent } from './author-update/author-update.component';
 import { AuthorService } from './author.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookUpdateComponent } from './book-update/book-update.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { AuthorService } from './author.service';
     LoginComponent,
     AuthorListComponent,
     RegistrationComponent,
-    AuthorUpdateComponent
+    AuthorUpdateComponent,
+    BookListComponent,
+    BookUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [AuthorService],
   bootstrap: [AppComponent]

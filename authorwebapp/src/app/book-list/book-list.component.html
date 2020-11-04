@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="row col-md-12 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">BooksId</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books;index as i">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{book.id}}</td>
+                        <td>{{book.title}}</td>
+                        <td><button type="button" class="btn btn-danger btn-xs" (click)="deleteBookById(book.id)"><span
+                                    class="glyphicon glyphicon-remove">Delete</span></button>
+                        </td>
+                        <td> <button type="button" class="btn btn-info btn-xs" (click)="updateBookById(book.id)"><span
+                                    class="glyphicon glyphicon-ok">Update</span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a routerLink="/authors" class="btn btn-link"><span class="glyphicon glyphicon-ok">Back</span></a>
+        </div>
+    </div>
+</div>

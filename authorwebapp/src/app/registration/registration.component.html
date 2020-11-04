@@ -1,1 +1,87 @@
-<p>registration works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">
+                        Registration the Author Info
+                        <span class="req"><small>required * </small> </span>
+                    </legend>
+                    <div class="form-group">
+                        <label for="firstName">
+                            <span class="req">* FirstName: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.firstName" name="name" id="firstName"
+                            class="form-control" placeholder="Enter Your Name..." aria-describedby="name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">
+                            <span class="req">* LastName: <small>This will be your Author lasttname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="author.lastName" name="lastName" id="lastName"
+                            class="form-control" placeholder="Enter Your lastName..." aria-describedby="lastName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">
+                            <span class="req">* City: <small>This will be your Author City</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="address.city" name="city" id="city"
+                            class="form-control" placeholder="Enter Your city..." aria-describedby="city" />
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="AddressLine1">
+                            <span class="req">* addressLine1: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="address.addressLine1" name="addressLine1"
+                            id="addressLine1" class="form-control" placeholder="Enter Your AddressLine1..."
+                            aria-describedby="addressLine1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="AddressLine2">
+                            <span class="req">* AddressLine2: <small>This will be your Author firstname</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="address.addressLine2" name="addressLine2"
+                            id="addressLine2" class="form-control" placeholder="Enter Your AddressLine2..."
+                            aria-describedby="addressLine2" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">
+                            <span class="req">* State: <small>This will be your Author state</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="address.state" name="state" id="state"
+                            class="form-control" placeholder="Enter Your state..." aria-describedby="state" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">
+                            <span class="req">* Country: <small>This will be your Author country</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="address.country" name="country" id="country"
+                            class="form-control" placeholder="Enter Your country..." aria-describedby="country" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="book">
+                            <span class="req">* Book: <small>This will be your Author country</small>
+                            </span></label>
+                        <input required type="text" [(ngModel)]="book.title" name="title" id="books"
+                            class="form-control" placeholder="Enter Your books..." aria-describedby="books" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register"
+                            (click)="registrion()">
+                        <a routerLink="/login" class="btn btn-link">Cancel</a>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
