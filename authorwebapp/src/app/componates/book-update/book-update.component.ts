@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Author } from '../author';
-import { AuthorService } from '../author.service';
-import { Book } from '../book';
+import { Author } from 'src/app/models/author';
+import { Book } from 'src/app/models/book';
+import { AuthorService } from 'src/app/services/author/author.service';
 
 @Component({
   selector: 'app-book-update',
@@ -13,7 +13,8 @@ export class BookUpdateComponent implements OnInit {
   id: number;
   author: any = new Author();
   book: any = new Book();
-
+  confirmClicked = false;
+  cancelClicked = false;
   constructor(private service: AuthorService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class BookUpdateComponent implements OnInit {
 
   public update(): any {
     let resp = this.service.updateBookById(this.id, this.book);
+     this.confirmClicked = true;
     resp.subscribe((data) => {
       console.log(data);
     });

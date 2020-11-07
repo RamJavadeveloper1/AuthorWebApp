@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Author } from './author';
 import { environment } from 'src/environments/environment';
-import { Book } from './book';
+import { Author } from 'src/app/models/author';
+import { Book } from 'src/app/models/book';
+
+
 
 @Injectable({
   providedIn: 'root'

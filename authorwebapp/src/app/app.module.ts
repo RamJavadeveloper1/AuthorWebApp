@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { AuthorListComponent } from './author-list/author-list.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { AuthorUpdateComponent } from './author-update/author-update.component';
-import { AuthorService } from './author.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BookListComponent } from './book-list/book-list.component';
-import { BookUpdateComponent } from './book-update/book-update.component';
+import { LoginComponent } from './componates/login/login.component';
+import { AuthorListComponent } from './componates/author-list/author-list.component';
+import { RegistrationComponent } from './componates/registration/registration.component';
+import { AuthorUpdateComponent } from './componates/author-update/author-update.component';
+import { BookListComponent } from './componates/book-list/book-list.component';
+import { BookUpdateComponent } from './componates/book-update/book-update.component';
+import { AuthorService } from './services/author/author.service';
+
+
+LoginComponent
 
 @NgModule({
   declarations: [
@@ -30,7 +32,11 @@ import { BookUpdateComponent } from './book-update/book-update.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    ReactiveFormsModule,
+    NgbModule,
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType: 'danger', // set defaults here
+    }),
   ],
   providers: [AuthorService],
   bootstrap: [AppComponent]

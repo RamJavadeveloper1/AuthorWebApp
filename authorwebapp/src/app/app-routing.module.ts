@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthorListComponent } from './author-list/author-list.component';
-import { AuthorUpdateComponent } from './author-update/author-update.component';
-import { AuthorService } from './author.service';
-import { BookListComponent } from './book-list/book-list.component';
-import { BookUpdateComponent } from './book-update/book-update.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { AuthorListComponent } from './componates/author-list/author-list.component';
+import { AuthorUpdateComponent } from './componates/author-update/author-update.component';
+import { BookListComponent } from './componates/book-list/book-list.component';
+import { BookUpdateComponent } from './componates/book-update/book-update.component';
+import { LoginComponent } from './componates/login/login.component';
+import { RegistrationComponent } from './componates/registration/registration.component';
 
 const routes: Routes = [
 {path:'', redirectTo:'login', pathMatch:"full"},

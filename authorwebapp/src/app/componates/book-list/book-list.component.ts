@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Author } from '../author';
-import { AuthorService } from '../author.service';
-import { Book } from '../book';
+import { Author } from 'src/app/models/author';
+import { Book } from 'src/app/models/book';
+import { AuthorService } from 'src/app/services/author/author.service';
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -13,6 +14,8 @@ export class BookListComponent implements OnInit {
   id: number;
   author: any = new Author();
   books: any
+  popoverTitle = 'Book Delete Confirmation';
+  popoverMessage = 'Do you really want to delete ?';
   confirmClicked = false;
   cancelClicked = false;
 

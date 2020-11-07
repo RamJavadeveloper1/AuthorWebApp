@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Author } from '../author';
-import { AuthorService } from '../author.service';
+import { Author } from 'src/app/models/author';
+import { AuthorService } from 'src/app/services/author/author.service';
+
 @Component({
   selector: 'app-author-list',
   templateUrl: './author-list.component.html',
@@ -14,7 +15,7 @@ export class AuthorListComponent implements OnInit {
   id: number;
   name: string;
   massage: string;
-  popoverTitle = 'Record Delete Confirmation';
+  popoverTitle = 'Author Delete Confirmation';
   popoverMessage = 'Do you really want to delete ?';
   confirmClicked = false;
   cancelClicked = false;

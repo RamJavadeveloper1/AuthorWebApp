@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Author } from '../author';
-import { AuthorService } from '../author.service';
+import { Author } from 'src/app/models/author';
+import { AuthorService } from 'src/app/services/author/author.service';
 
 @Component({
   selector: 'app-author-update',
@@ -30,9 +30,11 @@ export class AuthorUpdateComponent implements OnInit {
 
   public update(): any {
     let resp = this.service.updateAuthorById(this.id, this.author);
+    this.confirmClicked=true
     resp.subscribe((data) => {
       console.log(data);
     });
+    
   }
 
   gotoList() {

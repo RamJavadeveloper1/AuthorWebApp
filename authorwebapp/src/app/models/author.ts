@@ -1,11 +1,11 @@
 import { from } from 'rxjs';
-import {Book} from './book'
-import {Address} from './address'
+import { Address } from './address';
+import { Book } from './book';
 
 export class Author {
     firstName: string;
     lastName: string;
     address: Address;
-    books: Book [];
+    books: Book[]=[];
    
 }
